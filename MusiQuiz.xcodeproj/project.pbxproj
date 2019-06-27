@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		79C484F422C538FD0049A2C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C484F322C538FD0049A2C6 /* AppDelegate.swift */; };
 		79C484F622C538FD0049A2C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C484F522C538FD0049A2C6 /* ViewController.swift */; };
-		79C484F922C538FD0049A2C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C484F722C538FD0049A2C6 /* Main.storyboard */; };
 		79C484FB22C538FE0049A2C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C484FA22C538FE0049A2C6 /* Assets.xcassets */; };
 		79C484FE22C538FE0049A2C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C484FC22C538FE0049A2C6 /* LaunchScreen.storyboard */; };
 		79C4850922C538FE0049A2C6 /* MusiQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C4850822C538FE0049A2C6 /* MusiQuizTests.swift */; };
 		79C4851422C538FE0049A2C6 /* MusiQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C4851322C538FE0049A2C6 /* MusiQuizUITests.swift */; };
+		79C4852222C53C2E0049A2C6 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C4852122C53C2E0049A2C6 /* PlayView.swift */; };
+		79C4852422C53D080049A2C6 /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C4852322C53D080049A2C6 /* ConfigurableView.swift */; };
+		79C4852B22C53F820049A2C6 /* Constraints+MusiQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C4852A22C53F820049A2C6 /* Constraints+MusiQuiz.swift */; };
+		79C4852D22C542F20049A2C6 /* UIViewComponents+MusiQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C4852C22C542F20049A2C6 /* UIViewComponents+MusiQuiz.swift */; };
+		79C4853022C547500049A2C6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C4852F22C547500049A2C6 /* Service.swift */; };
+		79C4853222C548360049A2C6 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C4853122C548360049A2C6 /* Routes.swift */; };
+		79C4853422C54DC60049A2C6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C4853322C54DC60049A2C6 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +43,6 @@
 		79C484F022C538FD0049A2C6 /* MusiQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusiQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C484F322C538FD0049A2C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79C484F522C538FD0049A2C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		79C484F822C538FD0049A2C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79C484FA22C538FE0049A2C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79C484FD22C538FE0049A2C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79C484FF22C538FE0049A2C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		79C4850F22C538FE0049A2C6 /* MusiQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C4851322C538FE0049A2C6 /* MusiQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiQuizUITests.swift; sourceTree = "<group>"; };
 		79C4851522C538FE0049A2C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79C4852122C53C2E0049A2C6 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		79C4852322C53D080049A2C6 /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
+		79C4852A22C53F820049A2C6 /* Constraints+MusiQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraints+MusiQuiz.swift"; sourceTree = "<group>"; };
+		79C4852C22C542F20049A2C6 /* UIViewComponents+MusiQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewComponents+MusiQuiz.swift"; sourceTree = "<group>"; };
+		79C4852F22C547500049A2C6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		79C4853122C548360049A2C6 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		79C4853322C54DC60049A2C6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +109,17 @@
 		79C484F222C538FD0049A2C6 /* MusiQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				79C4852922C53EFC0049A2C6 /* Extension */,
+				79C4852E22C545270049A2C6 /* Networking */,
+				79C4852822C53D5B0049A2C6 /* ViewModel */,
+				79C4852722C53D520049A2C6 /* Controller */,
+				79C4852622C53D4D0049A2C6 /* View */,
+				79C4852522C53D470049A2C6 /* Model */,
 				79C484F322C538FD0049A2C6 /* AppDelegate.swift */,
-				79C484F522C538FD0049A2C6 /* ViewController.swift */,
-				79C484F722C538FD0049A2C6 /* Main.storyboard */,
 				79C484FA22C538FE0049A2C6 /* Assets.xcassets */,
 				79C484FC22C538FE0049A2C6 /* LaunchScreen.storyboard */,
 				79C484FF22C538FE0049A2C6 /* Info.plist */,
+				79C4852322C53D080049A2C6 /* ConfigurableView.swift */,
 			);
 			path = MusiQuiz;
 			sourceTree = "<group>";
@@ -123,6 +140,55 @@
 				79C4851522C538FE0049A2C6 /* Info.plist */,
 			);
 			path = MusiQuizUITests;
+			sourceTree = "<group>";
+		};
+		79C4852522C53D470049A2C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				79C4853322C54DC60049A2C6 /* Result.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		79C4852622C53D4D0049A2C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79C4852122C53C2E0049A2C6 /* PlayView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		79C4852722C53D520049A2C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				79C484F522C538FD0049A2C6 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		79C4852822C53D5B0049A2C6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		79C4852922C53EFC0049A2C6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				79C4852A22C53F820049A2C6 /* Constraints+MusiQuiz.swift */,
+				79C4852C22C542F20049A2C6 /* UIViewComponents+MusiQuiz.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		79C4852E22C545270049A2C6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				79C4852F22C547500049A2C6 /* Service.swift */,
+				79C4853122C548360049A2C6 /* Routes.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +297,6 @@
 			files = (
 				79C484FE22C538FE0049A2C6 /* LaunchScreen.storyboard in Resources */,
 				79C484FB22C538FE0049A2C6 /* Assets.xcassets in Resources */,
-				79C484F922C538FD0049A2C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +321,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C4853422C54DC60049A2C6 /* Result.swift in Sources */,
+				79C4852222C53C2E0049A2C6 /* PlayView.swift in Sources */,
+				79C4853222C548360049A2C6 /* Routes.swift in Sources */,
+				79C4853022C547500049A2C6 /* Service.swift in Sources */,
+				79C4852D22C542F20049A2C6 /* UIViewComponents+MusiQuiz.swift in Sources */,
+				79C4852B22C53F820049A2C6 /* Constraints+MusiQuiz.swift in Sources */,
+				79C4852422C53D080049A2C6 /* ConfigurableView.swift in Sources */,
 				79C484F622C538FD0049A2C6 /* ViewController.swift in Sources */,
 				79C484F422C538FD0049A2C6 /* AppDelegate.swift in Sources */,
 			);
@@ -293,14 +365,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		79C484F722C538FD0049A2C6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				79C484F822C538FD0049A2C6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		79C484FC22C538FE0049A2C6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
