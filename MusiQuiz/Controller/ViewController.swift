@@ -11,6 +11,10 @@ import UIKit
 class ViewController: UIViewController, ConfigurableView {
     let playView = PlayView()
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -26,4 +30,3 @@ class ViewController: UIViewController, ConfigurableView {
         playView.fillSuperview()
     }
 }
-

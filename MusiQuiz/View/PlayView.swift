@@ -10,7 +10,7 @@ import UIKit
 
 class PlayView: UIView, ConfigurableView {
     
-    lazy var songLabel = UILabel(text: "MusiQuiz")
+    lazy var timerView = TimerView()
     
     lazy var firstOpition: UIButton = {
         let button = UIButton()
@@ -41,6 +41,7 @@ class PlayView: UIView, ConfigurableView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.text = "Opção 4"
+        button.titleLabel?.textColor = .black
         button.backgroundColor = .green
         return button
     }()
@@ -64,7 +65,7 @@ class PlayView: UIView, ConfigurableView {
     }
     
     func buildViewHierarchy() {
-        addSubview(songLabel)
+        addSubview(timerView)
         addSubview(playSong)
         addSubview(firstOpition)
         addSubview(secondOption)
@@ -73,23 +74,36 @@ class PlayView: UIView, ConfigurableView {
     }
     
     func setupConstraints() {
+        timerView.centerXInSuperview()
+        playSong.centerXInSuperview()
+        
+        
+        
        NSLayoutConstraint.activate([
-            songLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 30),
-            songLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            playSong.topAnchor.constraint(equalTo: self.songLabel.bottomAnchor, constant: 20),
+            playSong.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
             playSong.widthAnchor.constraint(equalToConstant: 200),
             playSong.heightAnchor.constraint(equalToConstant: 200),
-            playSong.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+          
+           
             firstOpition.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            firstOpition.topAnchor.constraint(equalTo: self.playSong.bottomAnchor, constant: 100),
-            secondOption.leadingAnchor.constraint(equalTo: self.firstOpition.trailingAnchor, constant: 20),
-            secondOption.topAnchor.constraint(equalTo: self.firstOpition.topAnchor),
-            secondOption.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10),
+            firstOpition.topAnchor.constraint(equalTo: self.playSong.bottomAnchor, constant: 30),
+            firstOpition.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            
+            secondOption.topAnchor.constraint(equalTo: firstOpition.bottomAnchor,constant: 10),
+            secondOption.leadingAnchor.constraint(equalTo: self.firstOpition.leadingAnchor),
+            secondOption.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            
+            
+            
+            thirdOption.topAnchor.constraint(equalTo: secondOption.bottomAnchor,constant: 10),
             thirdOption.leadingAnchor.constraint(equalTo: self.firstOpition.leadingAnchor),
-            thirdOption.topAnchor.constraint(equalTo: self.firstOpition.bottomAnchor, constant: 10),
-            quarterOption.leadingAnchor.constraint(equalTo: self.thirdOption.trailingAnchor, constant: 20),
-            quarterOption.topAnchor.constraint(equalTo: self.secondOption.bottomAnchor, constant: 10),
-            quarterOption.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10)
+            thirdOption.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            
+            
+            
+            quarterOption.topAnchor.constraint(equalTo: thirdOption.bottomAnchor,constant: 10),
+            quarterOption.leadingAnchor.constraint(equalTo: self.firstOpition.leadingAnchor),
+            quarterOption.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
         ])
     }
 }

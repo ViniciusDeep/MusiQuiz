@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7952CFEC22C6369D00838809 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952CFEB22C6369D00838809 /* TimerView.swift */; };
 		79C484F422C538FD0049A2C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C484F322C538FD0049A2C6 /* AppDelegate.swift */; };
 		79C484F622C538FD0049A2C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C484F522C538FD0049A2C6 /* ViewController.swift */; };
 		79C484FB22C538FE0049A2C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C484FA22C538FE0049A2C6 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7952CFEB22C6369D00838809 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		79C484F022C538FD0049A2C6 /* MusiQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusiQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C484F322C538FD0049A2C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79C484F522C538FD0049A2C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				79C4852122C53C2E0049A2C6 /* PlayView.swift */,
+				7952CFEB22C6369D00838809 /* TimerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7952CFEC22C6369D00838809 /* TimerView.swift in Sources */,
 				79C4853422C54DC60049A2C6 /* Result.swift in Sources */,
 				79C4852222C53C2E0049A2C6 /* PlayView.swift in Sources */,
 				79C4853222C548360049A2C6 /* Routes.swift in Sources */,
