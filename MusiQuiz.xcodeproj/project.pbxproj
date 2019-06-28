@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		774A6F7C22C68BB50004F06C /* UIVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A6F7B22C68BB50004F06C /* UIVIew+Extension.swift */; };
+		774A6F7E22C68DA50004F06C /* ChoiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A6F7D22C68DA50004F06C /* ChoiceButton.swift */; };
+		774A6F8022C69C3E0004F06C /* UIButton+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A6F7F22C69C3E0004F06C /* UIButton+Animations.swift */; };
 		7952CFEC22C6369D00838809 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952CFEB22C6369D00838809 /* TimerView.swift */; };
 		79C484F422C538FD0049A2C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C484F322C538FD0049A2C6 /* AppDelegate.swift */; };
 		79C484F622C538FD0049A2C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C484F522C538FD0049A2C6 /* ViewController.swift */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		774A6F7B22C68BB50004F06C /* UIVIew+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extension.swift"; sourceTree = "<group>"; };
+		774A6F7D22C68DA50004F06C /* ChoiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceButton.swift; sourceTree = "<group>"; };
+		774A6F7F22C69C3E0004F06C /* UIButton+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Animations.swift"; sourceTree = "<group>"; };
 		7952CFEB22C6369D00838809 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		79C484F022C538FD0049A2C6 /* MusiQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusiQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C484F322C538FD0049A2C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 			children = (
 				79C4852122C53C2E0049A2C6 /* PlayView.swift */,
 				7952CFEB22C6369D00838809 /* TimerView.swift */,
+				774A6F7D22C68DA50004F06C /* ChoiceButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				774A6F7B22C68BB50004F06C /* UIVIew+Extension.swift */,
 				79C4852A22C53F820049A2C6 /* Constraints+MusiQuiz.swift */,
 				79C4852C22C542F20049A2C6 /* UIViewComponents+MusiQuiz.swift */,
+				774A6F7F22C69C3E0004F06C /* UIButton+Animations.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -357,9 +363,11 @@
 				79C4852D22C542F20049A2C6 /* UIViewComponents+MusiQuiz.swift in Sources */,
 				774A6F7C22C68BB50004F06C /* UIVIew+Extension.swift in Sources */,
 				79C4852B22C53F820049A2C6 /* Constraints+MusiQuiz.swift in Sources */,
+				774A6F7E22C68DA50004F06C /* ChoiceButton.swift in Sources */,
 				79C4852422C53D080049A2C6 /* ConfigurableView.swift in Sources */,
 				79C484F622C538FD0049A2C6 /* ViewController.swift in Sources */,
 				79C484F422C538FD0049A2C6 /* AppDelegate.swift in Sources */,
+				774A6F8022C69C3E0004F06C /* UIButton+Animations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

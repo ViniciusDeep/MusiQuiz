@@ -20,6 +20,7 @@ class ViewController: UIViewController, ConfigurableView {
         view.backgroundColor = .white
         buildViewHierarchy()
         setupConstraints()
+        playView.delegate = self
     }
     
     func buildViewHierarchy() {
@@ -28,5 +29,20 @@ class ViewController: UIViewController, ConfigurableView {
     
     func setupConstraints() {
         playView.fillSuperview()
+    }
+}
+
+extension ViewController: PlayViewDelegate {
+    func choiceButtonDidClick(button: SelectedButton) {
+        switch button {
+        case .choice0(let btn):
+            print("Button \(btn.tag) clicked")
+        case .choice1(let btn):
+            print("Button \(btn.tag) clicked")
+        case .choice2(let btn):
+            print("Button \(btn.tag) clicked")
+        case .choice3(let btn):
+            print("Button \(btn.tag) clicked")
+        }
     }
 }

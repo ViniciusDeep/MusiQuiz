@@ -8,41 +8,46 @@
 
 import UIKit
 
+enum SelectedButton {
+    case choice0(button: UIButton)
+    case choice1(button: UIButton)
+    case choice2(button: UIButton)
+    case choice3(button: UIButton)
+}
+
+protocol PlayViewDelegate: class {
+    func choiceButtonDidClick(button: SelectedButton)
+}
+
 class PlayView: UIView, ConfigurableView {
     
     lazy var timerView = TimerView()
     
-    lazy var firstOption: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.titleLabel?.text = "Opção 1"
-        button.backgroundColor = .red
+    lazy var choiceOneButton: ChoiceButton = {
+        let button = ChoiceButton()
+        button.tag = 0
+        button.addTarget(self, action: #selector(choiceButtonClicked), for: .touchUpInside)
         return button
     }()
     
-    lazy var secondOption: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.titleLabel?.text = "Opção 2"
-        button.backgroundColor = .yellow
+    lazy var choiceTwoButton: ChoiceButton = {
+        let button = ChoiceButton()
+        button.tag = 1
+        button.addTarget(self, action: #selector(choiceButtonClicked), for: .touchUpInside)
         return button
     }()
     
-    
-    lazy var thirdOption: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.titleLabel?.text = "Opção 3"
-        button.backgroundColor = .blue
+    lazy var choiceThreeButton: ChoiceButton = {
+        let button = ChoiceButton()
+        button.tag = 2
+        button.addTarget(self, action: #selector(choiceButtonClicked), for: .touchUpInside)
         return button
     }()
     
-    lazy var quarterOption: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.titleLabel?.text = "Opção 4"
-        button.titleLabel?.textColor = .black
-        button.backgroundColor = .green
+    lazy var choiceFourButton: ChoiceButton = {
+        let button = ChoiceButton()
+        button.tag = 3
+        button.addTarget(self, action: #selector(choiceButtonClicked), for: .touchUpInside)
         return button
     }()
     
@@ -53,6 +58,7 @@ class PlayView: UIView, ConfigurableView {
         return button
     }()
     
+    weak var delegate: PlayViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -65,8 +71,25 @@ class PlayView: UIView, ConfigurableView {
     }
     
     func buildViewHierarchy() {
-        let views = [timerView, playSong, firstOption, secondOption, thirdOption, quarterOption]
+        let views = [timerView, playSong, choiceOneButton, choiceTwoButton, choiceThreeButton, choiceFourButton]
         addSubviews(views)
+    }
+    
+    @objc func choiceButtonClicked(_ sender: UIButton) {
+        sender.pulsate() // Animate button with pulse effect
+        
+        switch sender.tag {
+        case 0:
+            delegate?.choiceButtonDidClick(button: .choice0(button: sender))
+        case 1:
+            delegate?.choiceButtonDidClick(button: .choice1(button: sender))
+        case 2:
+            delegate?.choiceButtonDidClick(button: .choice2(button: sender))
+        case 3:
+            delegate?.choiceButtonDidClick(button: .choice3(button: sender))
+        default:
+            print("Button clicked!")
+        }
     }
     
     func setupConstraints() {
@@ -80,32 +103,36 @@ class PlayView: UIView, ConfigurableView {
             playSong.heightAnchor.constraint(equalToConstant: 200)
         ])
         
-        // firstOption constraints
+        // choiceOneButton constraints
         NSLayoutConstraint.activate([
-            firstOption.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            firstOption.topAnchor.constraint(equalTo: self.playSong.bottomAnchor, constant: 30),
-            firstOption.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            choiceOneButton.topAnchor.constraint(equalTo: self.playSong.bottomAnchor, constant: 30),
+            choiceOneButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 24),
+            choiceOneButton.heightAnchor.constraint(equalToConstant: 48),
+            choiceOneButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
         
-        // secondOption constraints
+        // choiceTwoButton constraints
         NSLayoutConstraint.activate([
-            secondOption.topAnchor.constraint(equalTo: firstOption.bottomAnchor,constant: 10),
-            secondOption.leadingAnchor.constraint(equalTo: self.firstOption.leadingAnchor),
-            secondOption.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            choiceTwoButton.topAnchor.constraint(equalTo: choiceOneButton.bottomAnchor,constant: 10),
+            choiceTwoButton.leadingAnchor.constraint(equalTo: self.choiceOneButton.leadingAnchor),
+            choiceTwoButton.heightAnchor.constraint(equalToConstant: 48),
+            choiceTwoButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
         
-        // thirdOption constraints
+        // choiceThreeButton constraints
         NSLayoutConstraint.activate([
-            thirdOption.topAnchor.constraint(equalTo: secondOption.bottomAnchor,constant: 10),
-            thirdOption.leadingAnchor.constraint(equalTo: self.firstOption.leadingAnchor),
-            thirdOption.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            choiceThreeButton.topAnchor.constraint(equalTo: choiceTwoButton.bottomAnchor,constant: 10),
+            choiceThreeButton.leadingAnchor.constraint(equalTo: self.choiceOneButton.leadingAnchor),
+            choiceThreeButton.heightAnchor.constraint(equalToConstant: 48),
+            choiceThreeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
         
-        // fourthOption constraints
+        // choiceFourButton constraints
        NSLayoutConstraint.activate([
-            quarterOption.topAnchor.constraint(equalTo: thirdOption.bottomAnchor,constant: 10),
-            quarterOption.leadingAnchor.constraint(equalTo: self.firstOption.leadingAnchor),
-            quarterOption.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            choiceFourButton.topAnchor.constraint(equalTo: choiceThreeButton.bottomAnchor,constant: 10),
+            choiceFourButton.leadingAnchor.constraint(equalTo: self.choiceOneButton.leadingAnchor),
+            choiceFourButton.heightAnchor.constraint(equalToConstant: 48),
+            choiceFourButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
     }
 }
