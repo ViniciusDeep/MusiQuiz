@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		774A6F7C22C68BB50004F06C /* UIVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A6F7B22C68BB50004F06C /* UIVIew+Extension.swift */; };
 		7952CFEC22C6369D00838809 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952CFEB22C6369D00838809 /* TimerView.swift */; };
 		79C484F422C538FD0049A2C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C484F322C538FD0049A2C6 /* AppDelegate.swift */; };
 		79C484F622C538FD0049A2C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C484F522C538FD0049A2C6 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		774A6F7B22C68BB50004F06C /* UIVIew+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extension.swift"; sourceTree = "<group>"; };
 		7952CFEB22C6369D00838809 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		79C484F022C538FD0049A2C6 /* MusiQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusiQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C484F322C538FD0049A2C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		79C4852922C53EFC0049A2C6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				774A6F7B22C68BB50004F06C /* UIVIew+Extension.swift */,
 				79C4852A22C53F820049A2C6 /* Constraints+MusiQuiz.swift */,
 				79C4852C22C542F20049A2C6 /* UIViewComponents+MusiQuiz.swift */,
 			);
@@ -352,6 +355,7 @@
 				79C4853222C548360049A2C6 /* Routes.swift in Sources */,
 				79C4853022C547500049A2C6 /* Service.swift in Sources */,
 				79C4852D22C542F20049A2C6 /* UIViewComponents+MusiQuiz.swift in Sources */,
+				774A6F7C22C68BB50004F06C /* UIVIew+Extension.swift in Sources */,
 				79C4852B22C53F820049A2C6 /* Constraints+MusiQuiz.swift in Sources */,
 				79C4852422C53D080049A2C6 /* ConfigurableView.swift in Sources */,
 				79C484F622C538FD0049A2C6 /* ViewController.swift in Sources */,
