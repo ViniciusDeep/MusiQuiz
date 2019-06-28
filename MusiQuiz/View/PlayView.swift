@@ -24,7 +24,7 @@ class PlayView: UIView, ConfigurableView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.text = "Opção 2"
-        button.backgroundColor = .black
+        button.backgroundColor = .yellow
         return button
     }()
     
@@ -84,10 +84,12 @@ class PlayView: UIView, ConfigurableView {
             firstOpition.topAnchor.constraint(equalTo: self.playSong.bottomAnchor, constant: 100),
             secondOption.leadingAnchor.constraint(equalTo: self.firstOpition.trailingAnchor, constant: 20),
             secondOption.topAnchor.constraint(equalTo: self.firstOpition.topAnchor),
-            thirdOption.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            thirdOption.topAnchor.constraint(equalTo: self.firstOpition.bottomAnchor, constant: 100),
-            quarterOption.leadingAnchor.constraint(equalTo: self.firstOpition.trailingAnchor, constant: 20),
-            quarterOption.topAnchor.constraint(equalTo: self.secondOption.topAnchor)
+            secondOption.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10),
+            thirdOption.leadingAnchor.constraint(equalTo: self.firstOpition.leadingAnchor),
+            thirdOption.topAnchor.constraint(equalTo: self.firstOpition.bottomAnchor, constant: 10),
+            quarterOption.leadingAnchor.constraint(equalTo: self.thirdOption.trailingAnchor, constant: 20),
+            quarterOption.topAnchor.constraint(equalTo: self.secondOption.bottomAnchor, constant: 10),
+            quarterOption.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10)
         ])
     }
 }
