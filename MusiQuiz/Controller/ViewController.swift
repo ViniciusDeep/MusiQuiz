@@ -26,4 +26,3 @@ class ViewController: UIViewController, ConfigurableView {
         playView.fillSuperview()
     }
 }
-
